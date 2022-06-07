@@ -11,8 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[i].classList.add('player-one');
           currentPlayer = 2;
           displayCurrentPLayer.textContent = currentPlayer;
+        } else if (currentPlayer === 2) {
+          squares[i].classList.add('taken');
+          squares[i].classList.add('player-two');
+          currentPlayer = 1;
+          displayCurrentPLayer.textContent = currentPlayer;
         }
-      }
+      } else alert('Can not go there');
     };
   }
 });
