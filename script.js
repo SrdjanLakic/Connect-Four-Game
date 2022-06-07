@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const squares = document.querySelectorAll('.grid div');
   const result = document.getElementById('result');
   const displayCurrentPLayer = document.getElementById('current-player');
-  let playerOneScore = 0;
-  let playerTwoScore = 0;
 
   let currentPlayer = 1;
+  let playerOneScore = 0;
+  let playerTwoScore = 0;
 
   const winningArrayes = [
     [0, 1, 2, 3],
