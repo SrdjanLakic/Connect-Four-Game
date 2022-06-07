@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         square4.classList.contains('player-one')
       ) {
         result.innerHTML = 'Player 1 Wins 🏆';
+        document.querySelector('h2').style.display = ' none';
       }
       if (
         square1.classList.contains('player-two') &&
@@ -97,12 +98,16 @@ document.addEventListener('DOMContentLoaded', () => {
         square4.classList.contains('player-two')
       ) {
         result.innerHTML = 'Player 2 Wins 🏆';
+        document.querySelector('h2').style.display = ' none';
       }
     }
   }
   for (let i = 0; i < squares.length; i++) {
     squares[i].onclick = () => {
-      if (squares[i + 7].classList.contains('taken')) {
+      if (
+        squares[i + 7].classList.contains('taken') &&
+        !squares[i].classList.contains('taken')
+      ) {
         if (currentPlayer === 1) {
           squares[i].classList.add('taken');
           squares[i].classList.add('player-one');
