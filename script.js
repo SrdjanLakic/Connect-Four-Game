@@ -2,7 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const squares = document.querySelectorAll('.grid div');
   const result = document.getElementById('result');
   const displayCurrentPLayer = document.getElementById('current-player');
+  let playerOneScore = 0;
+  let playerTwoScore = 0;
+
   let currentPlayer = 1;
+
   const winningArrayes = [
     [0, 1, 2, 3],
     [41, 40, 39, 38],
@@ -89,6 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
         square4.classList.contains('player-one')
       ) {
         result.innerHTML = 'Player 1 Wins 🏆';
+        playerOneScore = playerOneScore + 1;
+        document.getElementById('player-one-score').textContent =
+          playerOneScore;
         document.querySelector('h2').style.display = ' none';
       }
       if (
@@ -98,6 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
         square4.classList.contains('player-two')
       ) {
         result.innerHTML = 'Player 2 Wins 🏆';
+        playerTwoScore++;
+        document.getElementById('player-two-score').textContent =
+          playerTwoScore;
         document.querySelector('h2').style.display = ' none';
       }
     }
