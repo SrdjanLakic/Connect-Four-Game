@@ -19,3 +19,18 @@
   background-color: blue;
   border-radius: 10px;
 }
+.p-one-score {
+  border: 1px solid black;
+  height: 20px;
+  width: 120px;
+  background-color: red;
+  font-weight: bold;
+}
+.p-two-score {
+  border: 1px solid black;
+  height: 20px;
+  width: 120px;
+  background-color: blue;
+  color: rgb(214, 122, 127);
+  font-weight: bold;
+}
