@@ -34,3 +34,7 @@
   color: rgb(214, 122, 127);
   font-weight: bold;
 }
+
+.hidden {
+  display: none;
+}
